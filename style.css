@@ -1,19 +1,40 @@
 body {
-    background-color:aquamarine;
-    display:flex;
+    background-color:black;
+    display:flex; 
     margin:0;
     padding:0;
+    padding-right:400px;
+    padding-left:400px;
 }
 
 img {
-    display:flex;
+    position:relative;
     width:500px;
     height:auto;
-    margin:0;
 
+}
+
+.main_img {
+    /*width:500px;
+    height:auto; */
+
+}
+.inner_img {
+    top: 80%;
+    right:20%; 
+    width:60px;
+    background-color: rgb(188, 186, 186);
+    height:auto; 
+    position:absolute;
+    
 }
 
 h1 {
     text-align: center;
 
+}
+
+.right_side {
+    background-color: rgb(134, 61, 202);
+    justify-content: space-around;
 }
