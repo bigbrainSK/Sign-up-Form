@@ -8,40 +8,54 @@
 </head>
 <body>
 <div class="img">
-    <img src="city_img.jpg" alt="new york city skyline at night" class="main_img"> 
-     <div class="inner_img"> <img src="odin logo.png" alt="logo of Odin's face"> </div>
+    <img src="city_img.jpg" alt="new york city skyline at night" id="main_img"> 
+     <div class="inner_img"> ODIN<img src="odin logo.png" alt="logo of Odin's face"> </div>
+     <div id="img_cap">photo by matt nelson on unsplash </div> 
 </div>
  <div class="right_side">
-  <div class="first_section" id="section"> 
+  <div class="section" id="first_section"> 
     
     <h2>This is not a real online service. But alas, you do need this in your life
         to have your greatest desires realized. Sign up <em><strong>now</strong></em> to get started. </h2>
-        <p>I <em>know</em> you want to. </p>
-         <h3>Let's begin</h3>
+        <p>I <strong>know</strong> you want to. </p>
     </div> 
 
-  <div class="second_section" id="section"> 
+  <div class="section" id="second_section"> 
     <form>
-     <fieldset>
-       <p>
+      <h3>Let's begin</h3>
+       
         <label for="first_name" >FIRST NAME</label> 
         <input type="text" id="first_name" name="first_name" required />
-       </p>
-       <p>
+        <br>
         <label for="last_name">LAST NAME</label>
         <input type="text" id="last_name" name="last_name" required>
-       </p>
+        <br>
         <label for="email">EMAIL</label>
         <input type="email" id="mail" name="useremail" required>
-       <p>
+        <br>       
         <label for="pwd">PASSWORD</label>
-        <input type="password" id="pwd" name="password" required>
-       </p> 
-     </fieldset>
+        <input type="password" 
+          id="pwd" 
+          name="pwd" 
+          pattern=".{8,}" 
+          title="needs 8 or more characters" 
+          class="error" 
+          required>
+        <br>
+        <label for="confirm_pwd">CONFIRM PASSWORD</label>
+        <input type="confirm_password" 
+          id="confirm_pwd" 
+          name="confirm_pwd" 
+          class="error" 
+          required  >
+        <br>
+        <label for="phone#">PHONE NUMBER</label>
+        <input type="text" id="phone#" name="phone" >
+        
     </form>
 </div> 
 
-  <div class="third_section" id="section">
+  <div class="section" id="third_section">
     <button id="create"><strong>Create Account</strong></button>
     <div>Already have an account? <a href="index.html">Log in</a></div>
 
