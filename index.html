@@ -17,49 +17,60 @@
     
     <h2>This is not a real online service. But alas, you do need this in your life
         to have your greatest desires realized. Sign up <em><strong>now</strong></em> to get started. </h2>
+       <br>
         <p>I <strong>know</strong> you want to. </p>
     </div> 
 
   <div class="section" id="second_section"> 
-    <form>
-      <h3>Let's begin</h3>
-       
+    <form action="results.html" methdo="GET">
+      <fieldset>
+      <legend>Let's begin</legend>
+       <div class="container">
+        <div>
         <label for="first_name" >FIRST NAME</label> 
         <input type="text" id="first_name" name="first_name" required />
-        <br>
+        </div>
+        <div>
         <label for="last_name">LAST NAME</label>
         <input type="text" id="last_name" name="last_name" required>
-        <br>
+        </div>
+        <div>
         <label for="email">EMAIL</label>
         <input type="email" id="mail" name="useremail" required>
-        <br>       
-        <label for="pwd">PASSWORD</label>
+        </div>
+        <div>
+        <label for="phone#">PHONE NUMBER</label>
+        <input type="text" id="phone#" name="phone" >
+        </div>
+        <div>
+        <label for="password">PASSWORD</label>
         <input type="password" 
-          id="pwd" 
-          name="pwd" 
+          id="password" 
+          name="password" 
           pattern=".{8,}" 
           title="needs 8 or more characters" 
           class="error" 
           required>
-        <br>
-        <label for="confirm_pwd">CONFIRM PASSWORD</label>
-        <input type="confirm_password" 
-          id="confirm_pwd" 
-          name="confirm_pwd" 
+        </div>
+        <div>
+        <label for="confirm_password">CONFIRM PASSWORD</label>
+        <input type="password" 
+          id="confirm_password" 
+          name="confirm_password" 
           class="error" 
           required  >
-        <br>
-        <label for="phone#">PHONE NUMBER</label>
-        <input type="text" id="phone#" name="phone" >
-        
+          <div id="errorMessage"></div>
+        </div>
+        </fieldset>
     </form>
 </div> 
 
   <div class="section" id="third_section">
-    <button id="create"><strong>Create Account</strong></button>
-    <div>Already have an account? <a href="index.html">Log in</a></div>
+    <input type="button" id="submit" onclick="validatePassword()" value="Create Account" />
 
+    <div>Already have an account? <a href="index.html">Log in</a></div>
   </div>
  </div>
+ <script src="script.js"></script>
 </body>
 </html>

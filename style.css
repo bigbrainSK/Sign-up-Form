@@ -1,31 +1,39 @@
+
+@font-face {
+    font-family: "Norse-Bold";
+    src: url(https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf)
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
 body {
     background-color:black;
     display:flex; 
-    margin:0;
-    padding:0;
     padding-right:300px;
     padding-left:300px;
-    font-family: "Norse-Bold";
 }
+
 
 
 #main_img {
     width:auto;
-    max-height:900px;
+    max-height:800px;
     min-height:300px;
 }
 
 .img {
-   
     position:relative;
     text-align: center;   
-    
 }
 
 #img_cap {
     top:95%;
-    left:50%;
-    transform:translate(-95%, -50%);
+    left:65%;
+    transform:translate(-95%, -65%);
     position:absolute;
     color:white;
 
@@ -39,6 +47,7 @@ body {
     position:absolute;
     width:500px;
     color:white;    
+    font-family: "Norse-Bold";
 }
 
 img {
@@ -47,63 +56,116 @@ img {
 }
 
 label {
-    font-size:x-small;
+    display:block;
+    font-size:small;
+    font-weight:bold;
     width:200px;
     padding-bottom:3px;
 }
 
+fieldset {
+    border:none;
+    margin-top:30px;
+}
+
 input {
     width: 200px; 
+    height: 25px;
     border:#E5E7EB;
     border-radius:5px;
+    margin-bottom:10px;
+    border: black 1px;
 }
 
 form {
-    display:flex;
-    flex-direction:column;
+    box-sizing:border-box;
 }
 
+legend {
+    font-size: 1.25em;
+    padding:.25em;
+    font-weight:bold;
+    margin-bottom:20px;
+    
 
+}
 
 h1 {
     text-align: center;
 
 }
 
+.container {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    box-sizing:border-box;
+    gap:30px;
+    max-height:250px;
+    padding-right:150px;
+
+}
+
 .right_side {
     background-color: turquoise;
-    justify-content: space-around;
+   /* justify-content: space-around; */
+   padding-top:30px;
+   min-width:600px;
 }
 
 .section {
-    padding-left:75px;
-}
-
-#third_section {
-    padding-top:50px;
+    padding-left:40px;
 }
 
 #first_section {
     padding-bottom:50px;
+
 }
 
 #second_section {
-    display:flex;
     background-color: rgba(0, 128, 128, 0.378);
+   
+    height:300px;
 }
 
-#create {
-    background-color: #596D48;
-    margin-bottom:20px;
-    color:white;
-    padding:15px;
-    padding-right:30px;
-    padding-left:30px;
-    border-radius: 11px;
-    border:none;
+#third_section {
+    padding-top:100px;
 }
+
 
 a {
     color:#596D48;
     text-decoration: none;
+}
+
+#submit {
+    background-color: #596D48;
+    color:white;
+    padding-right:30px;
+    padding-left:30px;
+    padding-top:15px;
+    padding-bottom:30px;
+    margin-bottom:30px;
+    border-radius: 11px;
+    border:none;
+    font-weight:bold;
+    font-size:medium;
+    cursor:pointer;
+    
+}
+
+input:focus {
+    border-color:blue;
+    outline:none;
+    box-shadow:0 0 5px blue;
+    
+}
+
+#errorMessage {
+    color:red;
+}
+
+input:focus .error {
+    border-color:red;
+    outline:none;
 }
